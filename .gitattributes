@@ -93,3 +93,5 @@ python/packages/autogen-ext/tests/protos/*.pyi linguist-generated
 docs/** linguist-documentation
 python/docs/** linguist-documentation
 dotnet/website/** linguist-documentation
+
+.github/workflows/*.lock.yml linguist-generated=true
