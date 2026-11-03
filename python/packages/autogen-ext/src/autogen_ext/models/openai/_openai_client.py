@@ -960,8 +960,8 @@ class BaseOpenAIChatCompletionClient(ChatCompletionClient):
                     is_reasoning = True
                 thought_deltas.append(reasoning_content)
                 yield reasoning_content
-            elif reasoning_content is None and is_reasoning:
-                # Exit reasoning mode only when reasoning_content is None (not when it's an empty string).
+            elif is_reasoning:
+                # Exit reasoning mode.
                 reasoning_content = "</think>"
                 thought_deltas.append(reasoning_content)
                 is_reasoning = False
